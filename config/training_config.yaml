@@ -1,0 +1,65 @@
+# Training Configuration for Medical LLM Fine-tuning
+
+# Hugging Face Settings
+hugging_face_username: "your_username"  # Replace with your HF username
+
+# Model Configuration
+model_config:
+  base_model: "unsloth/llama-3-8b-Instruct-bnb-4bit"
+  finetuned_model: "llama-3-8b-medical"
+  max_seq_length: 2048
+  dtype: "float16"  # or "bfloat16" if supported
+  load_in_4bit: true
+
+# LoRA Configuration
+lora_config:
+  r: 16                    # LoRA rank (8, 16, 32, 64)
+  target_modules:
+    - "q_proj"
+    - "k_proj"
+    - "v_proj"
+    - "o_proj"
+    - "gate_proj"
+    - "up_proj"
+    - "down_proj"
+  lora_alpha: 16
+  lora_dropout: 0
+  bias: "none"
+  use_gradient_checkpointing: true
+  use_rslora: false
+  use_dora: false
+  loftq_config: null
+
+# Training Dataset
+training_dataset:
+  # Use short dataset for quick experiments (2000 samples)
+  name: "Shekswess/medical_llama3_instruct_dataset_short"
+  # Use full dataset for production training
+  # name: "Shekswess/medical_llama3_instruct_dataset"
+  split: "train"
+  input_field: "prompt"
+
+# Training Configuration (Optimized for RTX 3060 6GB)
+training_config:
+  per_device_train_batch_size: 1        # Reduced for 6GB VRAM
+  gradient_accumulation_steps: 8        # Increased to compensate
+  warmup_steps: 5
+  max_steps: 0              # Set to 0 to use num_train_epochs
+  num_train_epochs: 1       # Number of epochs
+  learning_rate: 0.0002     # 2e-4
+  fp16: true                # Auto-detect: set to !torch.cuda.is_bf16_supported()
+  bf16: false               # Auto-detect: set to torch.cuda.is_bf16_supported()
+  logging_steps: 1
+  optim: "adamw_8bit"
+  weight_decay: 0.01
+  lr_scheduler_type: "linear"
+  seed: 42
+  output_dir: "outputs"
+
+# Ollama Export Settings
+ollama_config:
+  model_name: "medical-llama3"
+  system_prompt: |
+    You are a helpful medical assistant. Answer medical questions accurately 
+    and professionally. Always recommend consulting a healthcare professional 
+    for actual medical advice.

@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What are the common symptoms of diabetes?",
+    "answer": "Common symptoms of diabetes include: 1) Increased thirst (polydipsia), 2) Frequent urination (polyuria), 3) Unexplained weight loss, 4) Increased hunger (polyphagia), 5) Fatigue and weakness, 6) Blurred vision, 7) Slow-healing wounds, 8) Frequent infections. Type 1 diabetes symptoms often develop quickly, while Type 2 diabetes symptoms may develop gradually over years."
+  },
+  {
+    "question": "How is hypertension diagnosed?",
+    "answer": "Hypertension (high blood pressure) is diagnosed through blood pressure measurements taken over multiple visits. A diagnosis is typically made when: 1) Systolic pressure is consistently 130 mmHg or higher, OR 2) Diastolic pressure is consistently 80 mmHg or higher. The diagnosis involves: multiple readings on different days, proper measurement technique, ruling out 'white coat hypertension', and sometimes 24-hour ambulatory blood pressure monitoring."
+  },
+  {
+    "question": "What is the treatment for pneumonia?",
+    "answer": "Pneumonia treatment depends on the type and severity: 1) Bacterial pneumonia: Antibiotics (amoxicillin, azithromycin, or fluoroquinolones), 2) Viral pneumonia: Supportive care, antivirals if caused by influenza, 3) Supportive care includes: rest, fluids, fever reducers (acetaminophen/ibuprofen), cough medicine. Severe cases may require hospitalization for IV antibiotics, oxygen therapy, or mechanical ventilation."
+  },
+  {
+    "question": "What are the risk factors for heart disease?",
+    "answer": "Major risk factors for heart disease include: Modifiable factors: 1) High blood pressure, 2) High cholesterol, 3) Smoking, 4) Diabetes, 5) Obesity, 6) Physical inactivity, 7) Unhealthy diet, 8) Excessive alcohol. Non-modifiable factors: 1) Age (men >45, women >55), 2) Family history of heart disease, 3) Gender (men at higher risk), 4) Race/ethnicity. Managing modifiable risk factors can significantly reduce heart disease risk."
+  },
+  {
+    "question": "How do you treat a migraine headache?",
+    "answer": "Migraine treatment includes: Acute treatment: 1) OTC pain relievers (NSAIDs, acetaminophen), 2) Triptans (sumatriptan), 3) Anti-nausea medications, 4) Rest in a dark, quiet room. Preventive treatment: 1) Beta-blockers, 2) Antidepressants (amitriptyline), 3) Anti-seizure drugs (topiramate), 4) CGRP inhibitors. Lifestyle modifications: regular sleep, stress management, identifying and avoiding triggers, staying hydrated."
+  }
+]

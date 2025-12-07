@@ -1,0 +1,40 @@
+# Core ML Libraries
+torch>=2.0.0
+transformers>=4.36.0
+datasets>=2.14.0
+accelerate>=0.25.0
+bitsandbytes>=0.41.0
+
+# PEFT and Training
+peft>=0.7.0
+trl>=0.7.0
+
+# Unsloth for fast fine-tuning
+# Install separately based on your GPU:
+# For RTX 30xx, 40xx, A100, H100:
+# pip install "unsloth[colab-new] @ git+https://github.com/unslothai/unsloth.git"
+# For older GPUs (V100, T4, RTX 20xx):
+# pip install "unsloth[colab-new] @ git+https://github.com/unslothai/unsloth.git" --no-deps
+
+# Jupyter
+jupyter>=1.0.0
+ipywidgets>=8.0.0
+notebook>=7.0.0
+
+# Hugging Face Hub
+huggingface_hub>=0.20.0
+
+# Utilities
+pandas>=2.0.0
+numpy>=1.24.0
+matplotlib>=3.7.0
+seaborn>=0.12.0
+tqdm>=4.65.0
+pyyaml>=6.0.0
+
+# Optional: For flash attention (faster training)
+# ninja
+# packaging
+# einops
+# flash-attn  # Requires CUDA compilation
+# xformers    # Alternative to flash-attn
